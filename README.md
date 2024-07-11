@@ -4,7 +4,7 @@
 # 남성 수제구두 쇼핑몰 HANZO
 
 
-## 1. 프로젝트 소개
+## :mans_shoe: 1. 프로젝트 소개
 
 - 남성 수제구두를 판매하는 간단한 웹사이트입니다. 사용자는 판매하고 있는 신발 목록을 볼 수 있고 원하는 신발을 선택해 구매할 수 있습니다.
 
@@ -51,5 +51,9 @@
    |마이페이지|내 정보|
    |------|---|
    |<img width="1677" alt="마이페이지" src="https://github.com/ROKTIC/project_hanzo_final/assets/38402914/1ffb356a-5c95-4e8c-bd85-827c68f7db11">|<img width="1668" alt="내 정보" src="https://github.com/ROKTIC/project_hanzo_final/assets/38402914/8846865f-cb4a-4e1b-ba17-6c045d47f5bc">|
+
+
+## 5. 최종 자료 ppt
+
 
 
