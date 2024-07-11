@@ -1,3 +1,6 @@
+
+![logo](https://github.com/ROKTIC/project_hanzo_final/assets/38402914/172f6030-3cc4-462a-93e8-ace3744007a9)
+
 # 남성 수제구두 쇼핑몰 HANZO
 
 
