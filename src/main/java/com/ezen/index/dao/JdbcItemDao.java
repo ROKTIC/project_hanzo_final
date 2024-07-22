@@ -253,11 +253,23 @@ public class JdbcItemDao implements ItemDao {
         Item item = new Item();
         OrderList orderList = new OrderList();
 
+        /* Oracle */
+//        sql.append(" SELECT it.cate_num, it.item_num, it.item_name, it.item_price, it.item_info, it.item_thumb, it.item_img, li.list_size")
+//                .append(" FROM ITEM it")
+//                .append(" FULL OUTER JOIN ORDER_LIST li")
+//                .append(" ON it.item_num = li.item_num")
+//                .append(" WHERE it.cate_num=? and it.item_num=?");
+
+        /* Mysql */ // mysql은 FULL OUTER JOIN 지원 x
         sql.append(" SELECT it.cate_num, it.item_num, it.item_name, it.item_price, it.item_info, it.item_thumb, it.item_img, li.list_size")
                 .append(" FROM ITEM it")
-                .append(" FULL OUTER JOIN ORDER_LIST li")
-                .append(" ON it.item_num = li.item_num")
-                .append(" WHERE it.cate_num=? and it.item_num=?");
+                .append(" LEFT JOIN ORDER_LIST li ON it.item_num = li.item_num")
+                .append(" WHERE it.cate_num=? AND it.item_num=?")
+                .append(" UNION")
+                .append(" SELECT it.cate_num, it.item_num, it.item_name, it.item_price, it.item_info, it.item_thumb, it.item_img, li.list_size")
+                .append(" FROM ORDER_LIST li")
+                .append(" LEFT JOIN ITEM it ON it.item_num = li.item_num")
+                .append(" WHERE it.cate_num=? AND it.item_num=?");
 
         Connection conn = connectionFactory.getConnection();
         PreparedStatement pstmt = null;
